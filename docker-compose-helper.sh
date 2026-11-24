@@ -8,8 +8,7 @@ if [[ "$compose_yn" == "y" ]]; then
     read -rp "Please enter the file path: " existing_compose_path;
     filename=$(echo $existing_compose_path | grep -oG 'compose.yaml\|docker-compose.yml')
     echo $filename
-    echo "Would you like to create one? (y/n)".
-    read -r create_compose
+    read -rp "Would you like to create one? (y/n) " create_compose
     if [[ "$create_compose" == "y" ]]; then
         touch compose.yaml;
     else
