@@ -2,9 +2,7 @@
 
 BLUE = '\033[1;34m'
 
-echo "Do you have a preexisting Docker Compose file? (y/n)"
-
-read compose_yn
+read -rp "Do you have a preexisting Docker Compose file? (y/n) " compose_yn
 
 if [[ "$compose_yn" == "y" ]]; then
     read -rp "Please enter the file path: " existing_compose_path;
